@@ -1,0 +1,58 @@
+[
+    {
+        "port": 8080,
+        "routes": [
+            {
+                "path": "/something/:someId",
+                "method": "PUT",
+                "response": {
+                    "status": "202",
+                    "data": {
+                        "success": true
+                    }
+                }
+            },
+            {
+                "path": "/something/:someId",
+                "method": "GET",
+                "response": {
+                    "status": "200",
+                    "data": {
+                        "name": "Matheus",
+                        "age": 70
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "port": 8081,
+        "routes": [
+            {
+                "path": "/books",
+                "method": "POST",
+                "response": {
+                    "status": "400",
+                    "data": {
+                        "success": false
+                    }
+                }
+            },
+            {
+                "path": "/books",
+                "method": "GET",
+                "response": {
+                    "status": "200",
+                    "data": [
+                        {
+                            "name": "some title"
+                        },
+                        {
+                            "name": "other title"
+                        }
+                    ]  
+                }
+            }
+        ]
+    }
+]

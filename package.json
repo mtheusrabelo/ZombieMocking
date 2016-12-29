@@ -1,0 +1,25 @@
+{
+  "name": "zombie-mocking",
+  "version": "1.0.0",
+  "description": "zombie api for request mocking",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusrabelo/ZombieMocking.git"
+  },
+  "keywords": [
+    "zombie",
+    "api",
+    "mocking",
+    "request"
+  ],
+  "author": "Matheus Freire Rabelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusrabelo/ZombieMocking/issues"
+  },
+  "homepage": "https://github.com/matheusrabelo/ZombieMocking#readme"
+}
