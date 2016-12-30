@@ -2,38 +2,30 @@ const zombies = require('./zombies.json');
 const express = require('express');
 
 zombies.forEach(zombie => {
-    const app = express();
+    let app = express();
     zombie.routes.forEach(route => {
+
+        let handler = (request, response) => {
+            response.set(route.response.header)
+                    .status(route.response.status)
+                    .json(route.response.body);
+        };
+
         switch (route.method) {
             case 'GET':
-                app.get(route.path, (request, response) => {
-                    response.status(route.response.status)
-                            .json(route.response.data);
-                });
+                app.get(route.path, handler);
                 break;
             case 'POST':
-                app.post(route.path, (request, response) => {
-                    response.status(route.response.status)
-                            .json(route.response.data);
-                });
+                app.post(route.path, handler);
                 break;
             case 'PUT':
-                app.put(route.path, (request, response) => {
-                    response.status(route.response.status)
-                            .json(route.response.data);
-                });
+                app.put(route.path, handler);
                 break;
             case 'DELETE':
-                app.delete(route.path, (request, response) => {
-                    response.status(route.response.status)
-                            .json(route.response.data);
-                });
+                app.delete(route.path, handler);
                 break;
             case 'OPTIONS':
-                app.options(route.path, (request, response) => {
-                    response.status(route.response.status)
-                            .json(route.response.data);
-                });
+                app.options(route.path, handler);
                 break;
         }
     });

@@ -7,7 +7,10 @@
                 "method": "PUT",
                 "response": {
                     "status": "202",
-                    "data": {
+                    "header": {
+                        "Content-Type": "application/json"
+                    },
+                    "body": {
                         "success": true
                     }
                 }
@@ -17,7 +20,10 @@
                 "method": "GET",
                 "response": {
                     "status": "200",
-                    "data": {
+                    "header": {
+                        "Content-Type": "application/json"
+                    },
+                    "body": {
                         "name": "Matheus",
                         "age": 70
                     }
@@ -33,7 +39,10 @@
                 "method": "POST",
                 "response": {
                     "status": "400",
-                    "data": {
+                    "header": {
+                        "Content-Type": "application/json"
+                    },
+                    "body": {
                         "success": false
                     }
                 }
@@ -43,7 +52,10 @@
                 "method": "GET",
                 "response": {
                     "status": "200",
-                    "data": [
+                    "header": {
+                        "Content-Type": "application/json"
+                    },
+                    "body": [
                         {
                             "name": "some title"
                         },
