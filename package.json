@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/matheusrabelo/ZombieMocking#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "morgan": "^1.9.0"
   }
 }

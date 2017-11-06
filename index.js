@@ -1,8 +1,10 @@
 const zombies = require('./zombies.json');
 const express = require('express');
+const morgan = require('morgan');
 
 zombies.forEach(zombie => {
     const app = express();
+    app.use(morgan('tiny'));
     zombie.routes.forEach(route => {
         const handler = (request, response) => {
             response.set(route.response.header)
